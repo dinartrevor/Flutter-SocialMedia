@@ -4,6 +4,7 @@ import 'package:flutter_iconpicker/flutter_iconpicker.dart';
 import 'story.dart';
 import 'post.dart';
 import 'login_page.dart';
+import 'about.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -66,7 +67,14 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: <Widget>[
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => AboutPage(),
+                ),
+              );
+            },
             icon: Icon(
               Icons.info,
               color: Colors.black,
